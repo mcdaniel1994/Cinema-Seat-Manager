@@ -67,3 +67,4 @@ if (fullAdjacent) {
 console.log(SEP);
 
 }
+runTestScenarios();

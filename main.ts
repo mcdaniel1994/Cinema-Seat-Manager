@@ -1,6 +1,5 @@
 import * as readline from "readline";
 import { initializeSeating, displaySeating, countSeats, findAdjacentSeats, reserveSeat } from "./cinema.js";
-import { runTestScenarios } from "./test_cinema.js";
 
 const GREEN = "\x1b[32m";
 const BLUE  = "\x1b[34m";
@@ -27,14 +26,13 @@ function showDashboard(): void {
     console.log("  3. Count Available / Occupied Seats");
     console.log("  4. Find Adjacent Seats");
     console.log("  5. Reset All Reservations");
-    console.log("  6. Run Test Scenarios");
-    console.log("  7. Exit");
+    console.log("  6. Exit");
     console.log(BLUE_SEP + "\n");
 }
 
 function main(): void {
     showDashboard();
-    rl.question("  Select an option (1-7): ", (answer: string) => {
+    rl.question("  Select an option (1-6):", (answer: string) => {
         if (answer === "1") {
             displaySeating(seating);
             main();
@@ -84,15 +82,12 @@ function main(): void {
             displaySeating(seating);
             main();
         } else if (answer === "6") {
-            runTestScenarios();
-            main();
-        } else if (answer === "7") {
             console.log("\n" + SEP);
             console.log("  Goodbye! Hope you found my CLI user friendly!");
             console.log(SEP + "\n");
             rl.close();
         } else {
-            console.log("\n⚠️  Please enter a number between 1 and 7.");
+            console.log("\n⚠️  Please enter a number between 1 and 6.");
             main();
         }
     });

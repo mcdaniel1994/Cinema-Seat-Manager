@@ -7,12 +7,15 @@ A TypeScript command-line application that simulates a cinema seat reservation s
 ## Project Structure
 
 ```
-project/
-  cinema.ts        ← Core logic — all functions live here
-  main.ts          ← Interactive menu entry point
-  test_cinema.ts   ← Isolated test scenarios
-  tsconfig.json    ← TypeScript compiler configuration
-  dist/            ← Compiled JavaScript output (auto-generated)
+Cinema-Seat-Manager/
+  cinema.ts          ← Core logic — all functions live here
+  main.ts            ← Interactive menu entry point
+  test_cinema.ts     ← Isolated test scenarios
+  tsconfig.json      ← TypeScript compiler configuration
+  package.json       ← Project metadata and dependencies
+  .gitignore         ← Git ignore rules
+  dist/              ← Compiled JavaScript output (auto-generated)
+  node_modules/      ← Installed dependencies (auto-generated)
 ```
 
 ---
@@ -22,18 +25,16 @@ project/
 **Install dependencies:**
 ```bash
 npm install
-npm i --save-dev @types/node
 ```
 
 **Compile and run the interactive menu:**
 ```bash
-npx tsc
-node dist/main.js
+npx tsc && node dist/main.js
 ```
 
 **Run test scenarios only:**
 ```bash
-node dist/test_cinema.js
+npx tsc && node dist/test_cinema.js
 ```
 
 ---
@@ -49,8 +50,7 @@ When you run `main.js` you will see an interactive menu with the following optio
 | 3 | Count occupied vs available seats |
 | 4 | Find the first pair of adjacent available seats |
 | 5 | Reset all reservations and start fresh |
-| 6 | Run all 4 test scenarios |
-| 7 | Exit the program |
+| 6 | Exit the program |
 
 The seating chart displays **X** for occupied seats and **L** for available seats, with row numbers down the left side and column numbers across the top.
 
@@ -119,6 +119,6 @@ Row and column inputs from the user are 1-based (1–8 rows, 1–10 columns). Al
 ## Technologies Used
 
 - TypeScript
-- Node.js
+- Node.js v16 or higher
 - readline (built-in Node module for user input)
 - ANSI escape codes for terminal color output

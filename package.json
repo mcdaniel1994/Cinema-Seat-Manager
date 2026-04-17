@@ -1,0 +1,25 @@
+{
+  "name": "cinema-seat-manager",
+  "version": "1.0.0",
+  "description": "A TypeScript command-line application that simulates a cinema seat reservation system. Built as part of the 4Geeks Academy AI Engineering Bootcamp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mcdaniel1994/Cinema-Seat-Manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/mcdaniel1994/Cinema-Seat-Manager/issues"
+  },
+  "homepage": "https://github.com/mcdaniel1994/Cinema-Seat-Manager#readme",
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "typescript": "^6.0.3"
+  }
+}
